@@ -1,0 +1,8 @@
+{
+  "item.foxcoin.coppercoin" : "Copper Coin",
+  "item.foxcoin.goldcoin" : "Gold Coin",
+
+  "block.foxcoin.silver_block": "Block of Silver",
+
+  "creativetab.foxcoin_tab" : "FoxCoin"
+}

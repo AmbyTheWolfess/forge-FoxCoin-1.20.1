@@ -1,8 +1,11 @@
 package net.ambythewolfess.foxcoin;
 
 import com.mojang.logging.LogUtils;
+import net.ambythewolfess.foxcoin.block.ModBlocks;
+import net.ambythewolfess.foxcoin.items.ModCreativeModTabs;
 import net.ambythewolfess.foxcoin.items.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,6 +17,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,7 +33,10 @@ public class FoxCoin
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModItems.resister(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -41,8 +48,9 @@ public class FoxCoin
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTab.INGREDIENT){
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.COPPERCOIN);
+            event.accept(ModItems.GOLDCOIN);
         }
     }
 
