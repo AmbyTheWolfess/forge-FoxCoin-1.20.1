@@ -25,9 +25,13 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.SILVERCOIN.get());
                         output.accept(ModItems.PLATINUMCOIN.get());
                         output.accept(ModItems.NETHERITECOIN.get());
+                        output.accept(ModItems.RAW_SILVER.get());
+                        output.accept(ModItems.RAW_PLATINUM.get());
 
                         output.accept(ModBlocks.SILVER_BLOCK.get());
                         output.accept(ModBlocks.PLATINUM_BLOCK.get());
+                        output.accept(ModBlocks.RAW_SILVER_BLOCK.get());
+                        output.accept(ModBlocks.RAW_PLATINUM_BLOCK.get());
                     } ))
 
                     .build());

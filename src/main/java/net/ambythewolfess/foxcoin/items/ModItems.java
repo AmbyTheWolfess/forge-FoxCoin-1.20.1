@@ -22,6 +22,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NETHERITECOIN = ITEMS.register("netheritecoin",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_PLATINUM = ITEMS.register("raw_platinum",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
     ITEMS.register(eventBus);}

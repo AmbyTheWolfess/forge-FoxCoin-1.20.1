@@ -4,9 +4,13 @@
   "item.foxcoin.silvercoin" : "Silver Coin",
   "item.foxcoin.platinumcoin" : "Platinum Coin",
   "item.foxcoin.netheritecoin" : "Netherite Coin",
+  "item.foxcoin.raw_silver" : "Raw Silver",
+  "item.foxcoin.raw_platinum" : "Raw Platinum",
 
   "block.foxcoin.silver_block": "Block of Silver",
   "block.foxcoin.platinum_block": "Block of Platinum",
+  "block.foxcoin.raw_silver_block": "Block of Raw Silver",
+  "block.foxcoin.raw_platinum_block": "Block of Raw Platinum",
 
   "creativetab.foxcoin_tab" : "Fox Coin"
 }
