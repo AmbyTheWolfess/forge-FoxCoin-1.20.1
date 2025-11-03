@@ -16,6 +16,12 @@ public class ModItems {
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLDCOIN = ITEMS.register("goldcoin",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SILVERCOIN = ITEMS.register("silvercoin",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PLATINUMCOIN = ITEMS.register("platinumcoin",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NETHERITECOIN = ITEMS.register("netheritecoin",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
     ITEMS.register(eventBus);}

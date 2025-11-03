@@ -1,6 +1,9 @@
 {
   "item.foxcoin.coppercoin" : "Copper Coin",
   "item.foxcoin.goldcoin" : "Gold Coin",
+  "item.foxcoin.silvercoin" : "Silver Coin",
+  "item.foxcoin.platinumcoin" : "Platinum Coin",
+  "item.foxcoin.netheritecoin" : "Netherite Coin",
 
   "block.foxcoin.silver_block": "Block of Silver",
 

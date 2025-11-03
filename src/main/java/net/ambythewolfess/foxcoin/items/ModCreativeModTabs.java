@@ -20,8 +20,11 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GOLDCOIN.get()))
                     .title(Component.translatable("creativetab.foxcoin_tab"))
                     .displayItems(((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.GOLDCOIN.get());
                         output.accept(ModItems.COPPERCOIN.get());
+                        output.accept(ModItems.GOLDCOIN.get());
+                        output.accept(ModItems.SILVERCOIN.get());
+                        output.accept(ModItems.PLATINUMCOIN.get());
+                        output.accept(ModItems.NETHERITECOIN.get());
 
                         output.accept(ModBlocks.SILVER_BLOCK.get());
                     } ))
