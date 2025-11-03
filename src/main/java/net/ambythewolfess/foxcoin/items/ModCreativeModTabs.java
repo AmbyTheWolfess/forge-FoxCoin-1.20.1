@@ -27,6 +27,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.NETHERITECOIN.get());
 
                         output.accept(ModBlocks.SILVER_BLOCK.get());
+                        output.accept(ModBlocks.PLATINUM_BLOCK.get());
                     } ))
 
                     .build());

@@ -6,6 +6,7 @@
   "item.foxcoin.netheritecoin" : "Netherite Coin",
 
   "block.foxcoin.silver_block": "Block of Silver",
+  "block.foxcoin.platinum_block": "Block of Platinum",
 
-  "creativetab.foxcoin_tab" : "FoxCoin"
+  "creativetab.foxcoin_tab" : "Fox Coin"
 }
