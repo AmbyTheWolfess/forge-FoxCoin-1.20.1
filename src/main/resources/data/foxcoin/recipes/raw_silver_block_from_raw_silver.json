@@ -1,0 +1,17 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "foxcoin:raw_silver"
+    }
+  },
+  "result": {
+    "item": "foxcoin:raw_silver_block"
+  }
+}

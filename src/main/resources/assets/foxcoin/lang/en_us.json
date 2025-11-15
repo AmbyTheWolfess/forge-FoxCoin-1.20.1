@@ -6,11 +6,18 @@
   "item.foxcoin.netheritecoin" : "Netherite Coin",
   "item.foxcoin.raw_silver" : "Raw Silver",
   "item.foxcoin.raw_platinum" : "Raw Platinum",
+  "item.foxcoin.coin_purse" : "Coin Purse",
+  "item.foxcoin.platinum_ingot" : "Platinum Ingot",
+  "item.foxcoin.silver_ingot" : "Silver Ingot",
 
   "block.foxcoin.silver_block": "Block of Silver",
   "block.foxcoin.platinum_block": "Block of Platinum",
   "block.foxcoin.raw_silver_block": "Block of Raw Silver",
   "block.foxcoin.raw_platinum_block": "Block of Raw Platinum",
+  "block.foxcoin.silver_ore": "Silver Ore",
+  "block.foxcoin.platinum_ore": "Platinum Ore",
+  "block.foxcoin.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.foxcoin.deepslate_platinum_ore": "Deepslate Platinum Ore",
 
   "creativetab.foxcoin_tab" : "Fox Coin"
 }

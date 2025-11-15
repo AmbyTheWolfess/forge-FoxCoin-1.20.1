@@ -21,17 +21,24 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.foxcoin_tab"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.COPPERCOIN.get());
-                        output.accept(ModItems.GOLDCOIN.get());
                         output.accept(ModItems.SILVERCOIN.get());
+                        output.accept(ModItems.GOLDCOIN.get());
                         output.accept(ModItems.PLATINUMCOIN.get());
                         output.accept(ModItems.NETHERITECOIN.get());
                         output.accept(ModItems.RAW_SILVER.get());
                         output.accept(ModItems.RAW_PLATINUM.get());
+                        output.accept(ModItems.SILVER_INGOT.get());
+                        output.accept(ModItems.PLATINUM_INGOT.get());
+                        output.accept(ModItems.COIN_PURSE.get());
 
                         output.accept(ModBlocks.SILVER_BLOCK.get());
                         output.accept(ModBlocks.PLATINUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_SILVER_BLOCK.get());
                         output.accept(ModBlocks.RAW_PLATINUM_BLOCK.get());
+                        output.accept(ModBlocks.SILVER_ORE.get());
+                        output.accept(ModBlocks.PLATINUM_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_PLATINUM_ORE.get());
                     } ))
 
                     .build());

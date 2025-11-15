@@ -1,0 +1,13 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item":"foxcoin:silver_block"
+    }
+  ],
+  "result": {
+    "item": "foxcoin:silver_ingot",
+    "count": 9
+  }
+}
