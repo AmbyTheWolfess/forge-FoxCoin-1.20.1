@@ -24,20 +24,11 @@
                   }
                 }
               ],
-              "name": "foxcoin:deepslate_silver_ove"
+              "name": "foxcoin:deepslate_silver_ore"
             },
             {
               "type": "minecraft:item",
               "functions": [
-                {
-                  "add": false,
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "max": 1.0,
-                    "min": 1.0
-                  },
-                  "function": "minecraft:set_count"
-                },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
