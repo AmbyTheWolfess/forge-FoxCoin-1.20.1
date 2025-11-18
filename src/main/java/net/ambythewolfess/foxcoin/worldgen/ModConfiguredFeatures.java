@@ -1,0 +1,50 @@
+package net.ambythewolfess.foxcoin.worldgen;
+import net.ambythewolfess.foxcoin.FoxCoin;
+import net.ambythewolfess.foxcoin.block.ModBlocks;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+
+import java.util.List;
+
+import static net.minecraft.data.worldgen.features.FeatureUtils.register;
+
+public class ModConfiguredFeatures {
+    public static final ResourceKey<ConfiguredFeature<? , ?>> OVERWORLD_SILVER_ORE_KEY = registerKey("silver_ore");
+    public static final ResourceKey<ConfiguredFeature<? , ?>> OVERWORLD_PLATINUM_ORE_KEY = registerKey("platinum_ore");
+
+    public static void bootstap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+
+        List<OreConfiguration.TargetBlockState> overworldSilverOres = List.of(OreConfiguration.target(stoneReplaceable,
+                ModBlocks.SILVER_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldPlatinumOres = List.of(OreConfiguration.target(stoneReplaceable,
+                        ModBlocks.PLATINUM_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_PLATINUM_ORE.get().defaultBlockState()));
+
+        register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE,new OreConfiguration(overworldSilverOres, 6));
+        register(context, OVERWORLD_PLATINUM_ORE_KEY, Feature.ORE,new OreConfiguration(overworldPlatinumOres, 4));
+
+
+    }
+
+
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(FoxCoin.MOD_ID, name));
+    }
+
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1,
+  "group": "rosegold_ingot",
+  "ingredient": {
+    "item": "foxcoin:raw_rosegold"
+  },
+  "result": "foxcoin:rosegold_ingot"
+}

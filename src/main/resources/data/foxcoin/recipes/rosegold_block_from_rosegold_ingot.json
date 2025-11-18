@@ -1,0 +1,17 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "foxcoin:rosegold_ingot"
+    }
+  },
+  "result": {
+    "item": "foxcoin:rosegold_block"
+  }
+}

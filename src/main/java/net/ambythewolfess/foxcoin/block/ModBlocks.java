@@ -30,6 +30,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
 
+    public static final RegistryObject<Block> ROSEGOLD_BLOCK = registerBlock("rosegold_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
+
+    public static final RegistryObject<Block> RAW_ROSEGOLD_BLOCK = registerBlock("raw_rosegold_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
+
 
 
     public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore",

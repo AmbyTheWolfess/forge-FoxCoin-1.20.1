@@ -2,7 +2,6 @@ package net.ambythewolfess.foxcoin.items;
 
 import net.ambythewolfess.foxcoin.FoxCoin;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,6 +17,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILVERCOIN = ITEMS.register("silvercoin",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROSEGOLDCOIN = ITEMS.register("rosegoldcoin",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLATINUMCOIN = ITEMS.register("platinumcoin",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NETHERITECOIN = ITEMS.register("netheritecoin",
@@ -26,11 +27,13 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_PLATINUM = ITEMS.register("raw_platinum",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COIN_PURSE = ITEMS.register("coin_purse",
-            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROSEGOLD_INGOT = ITEMS.register("rosegold_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_ROSEGOLD = ITEMS.register("raw_rosegold",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
