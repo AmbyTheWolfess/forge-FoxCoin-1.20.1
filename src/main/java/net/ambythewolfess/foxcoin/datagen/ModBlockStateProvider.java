@@ -15,24 +15,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.ROSEGOLD_BLOCK);
         blockWithItem(ModBlocks.SILVER_BLOCK);
-        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
-
         blockWithItem(ModBlocks.PLATINUM_BLOCK);
+        blockWithItem(ModBlocks.RAW_ROSEGOLD_BLOCK);
+        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
         blockWithItem(ModBlocks.RAW_PLATINUM_BLOCK);
 
-        blockWithItem(ModBlocks.ROSEGOLD_BLOCK);
-        blockWithItem(ModBlocks.RAW_ROSEGOLD_BLOCK);
-
         blockWithItem(ModBlocks.SILVER_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
-
         blockWithItem(ModBlocks.PLATINUM_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SILVER_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_PLATINUM_ORE);
-
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject){
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }
