@@ -1,6 +1,5 @@
 package net.ambythewolfess.foxcoin.worldgen;
 
-import com.google.errorprone.annotations.Var;
 import net.ambythewolfess.foxcoin.FoxCoin;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -34,6 +33,6 @@ public class ModBiomeModifiers {
     }
 
     public static ResourceKey<BiomeModifier> resourceKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(FoxCoin.MOD_ID, name));
+        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(FoxCoin.MOD_ID, name));
     }
 }

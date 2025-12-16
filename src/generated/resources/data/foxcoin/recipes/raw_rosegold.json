@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:raw_gold"
+    },
+    "X": {
+      "item": "minecraft:raw_copper"
+    }
+  },
+  "pattern": [
+    "SS",
+    "SX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "foxcoin:raw_rosegold"
+  },
+  "show_notification": true
+}

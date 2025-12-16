@@ -11,6 +11,7 @@ import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -128,7 +129,59 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RAW_PLATINUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_PLATINUM_BLOCK.get()), has(ModBlocks.RAW_PLATINUM_BLOCK.get()))
                 .save(pWriter);
+
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.COPPER_INGOT),
+                RecipeCategory.MISC,
+                ModItems.COPPERCOIN.get(),
+                1
+        )
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.SILVER_INGOT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.SILVERCOIN.get(),
+                        1
+                )
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT.get()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.ROSEGOLD_INGOT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.ROSEGOLDCOIN.get(),
+                        1
+                )
+                .unlockedBy(getHasName(ModItems.ROSEGOLD_INGOT.get()), has(ModItems.ROSEGOLD_INGOT.get()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.GOLD_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.GOLDCOIN.get(),
+                        1
+                )
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModItems.PLATINUM_INGOT.get()),
+                        RecipeCategory.MISC,
+                        ModItems.PLATINUMCOIN.get(),
+                        1
+                )
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.NETHERITE_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.NETHERITECOIN.get(),
+                        1
+                )
+                .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+                .save(pWriter);
     }
+
+
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }

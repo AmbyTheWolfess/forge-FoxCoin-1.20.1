@@ -24,7 +24,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<? , ?>> OVERWORLD_SILVER_ORE_KEY = registerKey("silver_ore");
     public static final ResourceKey<ConfiguredFeature<? , ?>> OVERWORLD_PLATINUM_ORE_KEY = registerKey("platinum_ore");
 
-    public static void bootstap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
@@ -37,14 +38,17 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_PLATINUM_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE,new OreConfiguration(overworldSilverOres, 6));
-        register(context, OVERWORLD_PLATINUM_ORE_KEY, Feature.ORE,new OreConfiguration(overworldPlatinumOres, 4));
-
-
+        register(context, OVERWORLD_PLATINUM_ORE_KEY, Feature.ORE,new OreConfiguration(overworldPlatinumOres, 5));
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(FoxCoin.MOD_ID, name));
+    }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
 }

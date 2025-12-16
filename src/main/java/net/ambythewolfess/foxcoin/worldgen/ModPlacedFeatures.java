@@ -20,22 +20,22 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SILVER_ORE_PLACE_KEY = registerKey("silver_ore_placed");
     public static final ResourceKey<PlacedFeature> PLATINUM_ORE_PLACE_KEY = registerKey("platinum_ore_placed");
 
-    public static void bootsrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, SILVER_ORE_PLACE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_SILVER_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
+                ModOrePlacement.commonOrePlacement(14,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),VerticalAnchor.absolute(64))));
 
         register(context, PLATINUM_ORE_PLACE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_PLATINUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12,
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),VerticalAnchor.absolute(14))));
 
     }
 
 
 private static ResourceKey<PlacedFeature> registerKey(String name) {
-    return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(FoxCoin.MOD_ID, name));
+    return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(FoxCoin.MOD_ID, name));
 }
 
 private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
